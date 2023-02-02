@@ -1,0 +1,67 @@
+<!--Exemplo de tabela complexa-->
+<table>
+    <caption> <strong>Produtos x vendidos por loja</strong> </caption>
+    <colgroup>
+        <col>
+        <col span="2" style="background-color: red">
+        <col span="2" style="background-color: blue;">
+    </colgroup>
+    <thead>
+        <tr>
+            <th rowspan="2"></th>
+            <th colspan="2" scope="colgroup">Afonso Pena</th>
+            <th colspan="2" scope="colgroup">Antonia Pereira</th>
+        </tr>
+        <tr>
+            <th scope="col">Produzidos</th>
+            <th scope="col">vendidos</th>
+            <th scope="col">Produzidos</th>
+            <th scope="col">vendidos</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr>
+            <th scope="row" style="background-color: yellow;">Vassouras</th>
+            <td>50</td>
+            <td>30</td>
+            <td>20</td>
+            <td>20</td>
+        </tr>
+        <tr>
+            <th scope="row" style="background-color: yellow;">Baldes</th>
+            <td>10</td>
+            <td>10</td>
+            <td>30</td>
+            <td>25</td>
+        </tr>
+    </tbody>
+    <tfoot>
+        <tr>
+            <th scope="row" style="background-color: yellow;">Total:</th>
+            <td style="background-color: green;">60</td>
+            <td style="background-color: green;">40</td>
+            <td style="background-color: green;">50</td>
+            <td style="background-color: green;">45</td>
+        </tr>
+    </tfoot>
+</table><br><br><br>
+
+<!--Exemplo de formulario basico-->
+
+<form action="">
+    <fieldset>
+        <legend>Contato</legend>
+        
+        <label for="name">Nome</label>
+        <input type="text" id="name" name="name" placeholder="Digite seu nome"><br><br>
+
+        <label for="mail">Email</label>
+        <input type="email" id="mail" name="mail" placeholder="Digite seu Email"><br><br>
+
+        <label for="message">mensagem</label>
+        <textarea name="message" id="message" cols="25" rows="10" placeholder="Digite sua mensagem"></textarea><br><br>
+        
+        <button type="submit">Enviar</button>
+    </fieldset>
+</form>

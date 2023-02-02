@@ -1,0 +1,218 @@
+
+<head>
+ <title>Document</title>
+
+ <style>
+    .body {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        height: 100%;
+        
+    }
+
+    .ball{
+      margin: 20px; 
+       width: 100px;
+       height: 100px;
+       border-radius: 100%;
+       background-color: rgb(255, 0, 64);
+       position: relative;
+
+       animation-name: exemplo-two;
+       animation-duration: 0.8s;
+       animation-delay: 2s;
+       animation-iteration-count: 1s;
+       animation-direction: reverse;
+   }
+
+   .ball2{
+      margin: 20px; 
+       width: 100px;
+       height: 100px;
+       border-radius: 100%;
+       background-color: blueviolet;
+       position: relative;
+       animation-name: exemple2; 
+       animation-duration: 2s;
+       animation-delay: 2s;
+       animation-fill-mode: both;
+  
+   }
+
+    .box-red,
+    .box-green,
+    .box-blue,
+    .box-yellow{
+       margin: 20px;
+        width: 100px;
+        height: 100px;
+        border-radius: 100%;
+    }
+
+    .box-red{
+        background-color: red;
+        transition: background-color 1s ease 4s;
+    }
+
+    .box-red:hover{
+        background-color: #ff0;
+        transition-property: background-color;
+        transition-duration: 1s;
+        transition-timing-function: ease-in;
+        transition-delay: 2s;
+
+    }
+
+    .box-green{
+        background-color: green;
+        transition: all 1s linear 2s;
+    }
+
+    .box-green:hover{
+        transition: all 1s cubic-bezier(.29, 1.01, 1, -0.68);
+        background-color: rgb(255, 0, 208);
+        width: 300px;
+        height: 300px;
+        border-radius: 8px;
+    }
+    .box-blue{
+        background-color: blue;
+        transition: all 1s linear 1s;
+    }
+
+    .box-blue:hover{
+        transition: width 2s ease-out 0;
+        width: 350px;
+    }
+
+    .box-yellow{
+        background-color: #ff0;
+        transition: opacity 2s linear 1s;
+    }
+
+    .box-yellow:hover{
+        opacity: 0;
+        transition: opacity 2s linear 0;
+    }
+
+    .linear, .ease, .ease-in, .ease-out, .ease-in-out{
+        margin: 20px;
+        width: 100px;
+        height: 50px;
+        color: white;
+        background-color: blueviolet;
+        position: relative;
+        animation: exemple;
+        animation-duration: 2s;
+        animation-timing-function: linear;
+    }
+
+    .ease{
+        animation-timing-function: ease;
+    }
+
+    .ease-in{
+        animation-timing-function: ease-in;
+    }
+
+    .ease-out{
+        animation-timing-function: ease-out;;
+    }
+
+    .ease-in-out{
+        animation-timing-function: ease-in-out;
+    }
+
+    @keyframes exemple2{
+        0%{ 
+           left: 0px;
+           background-color: cyan;
+        }
+
+        50%{
+            left: 200px;
+            background-color: #ff0;
+        }
+
+        100%{
+           left: calc(100% - 100px);
+        }
+    }
+
+    @keyframes exemple{
+        from { 
+           left: 0px;
+        }
+
+        to{
+           left: calc(100% - 100px);
+        }
+    }
+   
+
+    @keyframes exemplo-one{
+        from { 
+            background-color:blueviolet;
+        }
+
+        to{
+            background-color: rosybrown;
+        }
+    }
+
+    @keyframes exemplo-two {
+        0%{
+            background-color: blueviolet;
+            left: 0;
+            top: 0;
+        }
+
+        25%{
+            background-color: rosybrown;
+            left: 500px;
+            top: 0px;
+        }
+
+        50%{
+            background-color: blue;
+            left: 500px;
+            top: 500px;
+        }
+
+        75%{
+            background-color: #ff0;
+            left: 0px;
+            top: 500px;
+        }
+
+        100%{
+           background-color: red;
+           left: 0px;
+           top: 0px;
+
+        }
+        
+    }
+
+
+
+ </style>
+</head>
+<body>
+    <div class="ball"></div>
+    <div class="ball2"></div>
+    <div class="box-red"></div>
+    <div class="box-green"></div>
+    <div class="box-blue"></div>
+    <div class="box-yellow"></div>
+    <div class="linear">linear</div>
+    <div class="ease">ease</div>
+    <div class="ease-in">ease-in</div>
+    <div class="ease-out">ease-out</div>
+    <div class="ease-in-out">ease-in-out</div>
+
+
+    
+</body>
+</html>
